@@ -6,6 +6,17 @@
 
 Multipart form post thru Ruby script, headers content-type and content-length properly set
 
+== SYNOPSIS
+
+require 'ruby-multipart-post'
+params = {
+    "param_0" => "value_0", "param_1" => "value_1",
+    "file_0" => FileUploadIO.new(path_to_file, file_content_type),
+    "file_1" => FileUploadIO.new(path_to_file, file_content_type)
+    }
+multipart_post = MultiPart::Post.new(params) # MultiPart::Post.new(params, some_extra_headers)
+multipart_post.submit(to_url) # multipart_post.submit(to_url, query_string)
+
 == REQUIREMENTS
 
 None
