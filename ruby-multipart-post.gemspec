@@ -2,15 +2,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ruby-multipart-post}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Amit Kumar"]
-  s.date = %q{2010-02-11}
+  s.date = %q{2010-03-13}
   s.description = %q{Multipart form post thru Ruby script, headers content-type and content-length properly set}
   s.email = %q{toamitkumar@gmail.com}
   s.extra_rdoc_files = ["README", "README.rdoc", "lib/file_upload_io.rb", "lib/multi_part_post.rb", "lib/parts.rb", "lib/ruby-multipart-post.rb", "lib/stream.rb"]
-  s.files = ["README", "README.rdoc", "Rakefile", "lib/file_upload_io.rb", "lib/multi_part_post.rb", "lib/parts.rb", "lib/ruby-multipart-post.rb", "lib/stream.rb", "test/file_upload_io_test.rb", "test/files/file_0.txt", "test/parts_test.rb", "Manifest", "ruby-multipart-post.gemspec"]
+  s.files = ["Manifest", "README", "README.rdoc", "Rakefile", "lib/file_upload_io.rb", "lib/multi_part_post.rb", "lib/parts.rb", "lib/ruby-multipart-post.rb", "lib/stream.rb", "ruby-multipart-post.gemspec", "test/file_upload_io_test.rb", "test/files/file_0.txt", "test/parts_test.rb"]
   s.homepage = %q{http://github.com/toamitkumar/ruby-multipart-post}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Ruby-multipart-post", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
