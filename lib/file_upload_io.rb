@@ -12,7 +12,7 @@ module FileUploadIO
       end
 
       def file_size
-        "#{File.size(file_path)}"
+        "#{File.size(file_path)}".to_i
       end
     EOS
     file_io

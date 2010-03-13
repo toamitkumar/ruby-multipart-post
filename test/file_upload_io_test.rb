@@ -25,6 +25,6 @@ class FileUploadIOTest < Test::Unit::TestCase
   end
 
   def test_should_have_file_size
-    assert_equal("41", @file_io.file_size)        
+    assert_equal(41, @file_io.file_size)        
   end
 end
