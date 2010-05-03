@@ -38,6 +38,7 @@ module MultiPart
       req.content_length = post_stream.size
       req.content_type = 'multipart/form-data; boundary=' + multi_part_boundary
       req.body_stream = post_stream
+      req.use_ssl = true if url.scheme == "https"
       res = Net::HTTP.new(url.host, url.port).start {|http| http.request(req) }
 
       #close all the open hooks to the file on file-system

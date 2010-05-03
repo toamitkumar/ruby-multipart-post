@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ruby-multipart-post}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Amit Kumar"]
-  s.date = %q{2010-03-13}
+  s.date = %q{2010-05-02}
   s.description = %q{Multipart form post thru Ruby script, headers content-type and content-length properly set}
   s.email = %q{toamitkumar@gmail.com}
   s.extra_rdoc_files = ["README", "README.rdoc", "lib/file_upload_io.rb", "lib/multi_part_post.rb", "lib/parts.rb", "lib/ruby-multipart-post.rb", "lib/stream.rb"]
