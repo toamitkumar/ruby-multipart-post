@@ -1,0 +1,6 @@
+v0.4.0
+  - Added support for ssl
+  - conditional query string
+
+v0.3.0
+  - better tests

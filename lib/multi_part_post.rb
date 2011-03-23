@@ -33,13 +33,15 @@ module MultiPart
     def submit(to_url, query_string=nil)
       post_stream = Stream::MultiPart.new(@parts)
       url = URI.parse( to_url )
-      post_url_with_query_string = "#{url.path}?#{query_string}"
+      post_url_with_query_string = "#{url.path}"
+      post_url_with_query_string = "#{post_url_with_query_string}?#{query_string}" unless(query_string.nil?)
       req = Net::HTTP::Post.new(post_url_with_query_string, @request_headers)
       req.content_length = post_stream.size
       req.content_type = 'multipart/form-data; boundary=' + multi_part_boundary
       req.body_stream = post_stream
-      req.use_ssl = true if url.scheme == "https"
-      res = Net::HTTP.new(url.host, url.port).start {|http| http.request(req) }
+      http_handle = Net::HTTP.new(url.host, url.port)
+      http_handle.use_ssl = true if(url.scheme == "https")
+      res = http_handle.start {|http| http.request(req)}
 
       #close all the open hooks to the file on file-system
       @streams.each do |local_stream|

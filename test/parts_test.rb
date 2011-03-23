@@ -24,6 +24,6 @@ class PartsTest < Test::Unit::TestCase
   end
 
   def test_should_read_file_part
-    assert_equal("Text\nhere\n", @file_part.read(5, 10))
+    assert_equal("Text\r\nhere", @file_part.read(5, 10))
   end
 end
