@@ -25,6 +25,9 @@ multipart_post.submit(to_url) # multipart_post.submit(to_url, query_string)
 
 None
 
+==Ruby Version compatibility
+Tested against -> REE, Ruby MRI (1.8.x, 1.9.2)
+
 == INSTALL
 
 gem install ruby-multipart-post
